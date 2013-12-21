@@ -1,0 +1,40 @@
+name:                relational-mysql
+version:             0.1.0.0
+synopsis:            MySQL driver for haskell-relational-record
+-- description:         
+license:             BSD3
+license-file:        LICENSE
+author:              krdlab
+maintainer:          krdlab@gmail.com
+copyright:           2013 KrdLab
+category:            Database
+build-type:          Simple
+-- extra-source-files:  
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:
+    src
+  exposed-modules:
+      Database.HDBC.Schema.MySQL
+    , Database.Relational.Schema.MySQL
+    , Database.Relational.Schema.MySQLInfo.Columns
+    , Database.Relational.Schema.MySQLInfo.KeyColumnUsage
+    , Database.Relational.Schema.MySQLInfo.TableConstraints
+  -- other-modules:       
+  other-extensions:
+      TemplateHaskell
+    , MultiParamTypeClasses
+  build-depends:
+      base >=4.6 && <4.7
+    , containers
+    , bytestring
+    , template-haskell >=2.8 && <2.9
+    , HDBC >=2.3 && <2.4
+    , names-th
+    , DB-record
+    , relational-join
+    , relational-query-HDBC
+    , time
+  default-language:
+    Haskell2010
