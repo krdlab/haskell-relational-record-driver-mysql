@@ -27,13 +27,13 @@ library
     , MultiParamTypeClasses
   build-depends:
       base >=4.6 && <4.7
+    , template-haskell >=2.8 && <2.9
     , containers
     , bytestring
-    , template-haskell >=2.8 && <2.9
     , HDBC >=2.3 && <2.4
     , names-th
-    , DB-record
-    , relational-join
+    , persistable-record
+    , relational-query
     , relational-query-HDBC
     , time
   default-language:
