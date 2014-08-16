@@ -1,5 +1,7 @@
 # MySQL driver for haskell-relational-record
 
+[![Build Status](https://drone.io/github.com/krdlab/haskell-relational-record-driver-mysql/status.png)](https://drone.io/github.com/krdlab/haskell-relational-record-driver-mysql/latest)
+
 ## Prepare
 
 ```sh
