@@ -38,3 +38,27 @@ library
     , time
   default-language:
     Haskell2010
+
+test-suite relational-mysql-spec
+  type:
+    exitcode-stdio-1.0
+  default-language:
+    Haskell2010
+  hs-source-dirs:
+    test
+  ghc-options:
+    -Wall
+  main-is:
+    Spec.hs
+  build-depends:
+      base
+    , template-haskell >=2.8 && <2.9
+    , hspec
+    , HDBC >=2.3
+    , HDBC-mysql
+    , HDBC-session
+    , names-th
+    , persistable-record
+    , relational-query
+    , relational-query-HDBC
+    , relational-mysql
