@@ -30,7 +30,7 @@ library
     , template-haskell >=2.8 && <2.9
     , containers
     , bytestring
-    , HDBC >=2.3 && <2.4
+    , HDBC >=2.3
     , names-th
     , persistable-record
     , relational-query

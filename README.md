@@ -1,36 +1,39 @@
-haskell-relational-record-driver-mysql
-====
+# MySQL driver for haskell-relational-record
 
-MySQL driver for haskell-relational-record
+## Prepare
 
-## Install
+```sh
+$ git clone git@github.com:khibino/haskell-relational-record.git
+$ git clone git@github.com:bos/hdbc-mysql.git
+$ git clone git@github.com:krdlab/haskell-relational-record-driver-mysql.git
+```
 
-### Prepare
+```sh
+$ cd haskell-relational-record-driver-mysql/example
+$ cabal sandbox init
+$ cabal sandbox add-source \
+    ../../haskell-relational-record/HDBC-session \
+    ../../haskell-relational-record/names-th \
+    ../../haskell-relational-record/persistable-record \
+    ../../haskell-relational-record/relational-query \
+    ../../haskell-relational-record/relational-query-HDBC \
+    ../../haskell-relational-record/relational-schemas \
+    ../../haskell-relational-record/sql-words \
+    ../../hdbc-mysql \
+    ../
+$ cabal install --only-dependencies
+```
 
-    $ mkdir test-hrr && cd test-hrr
-    $ hsenv
-    $ source .hsenv/bin/activate
+## Run example
 
-### Install Packages
+```sh
+$ mysql -h localhost -u root -p
+mysql> source setup.sql
+mysql> GRANT ALL PRIVILEGES ON TEST.* TO 'hrr-tester'@'127.0.0.1';
 
-    $ git clone https://github.com/khibino/haskell-relational-record.git && cd haskell-relational-record
-    $ make install
-
-    $ git clone https://github.com/krdlab/hdbc-mysql.git && cd hdbc-mysql
-    $ git checkout feature/support-cabal-1.18
-    $ cabal install
-
-    $ git clone https://github.com/krdlab/haskell-relational-record-driver-mysql.git && cd haskell-relational-record-driver-mysql
-    $ cabal install
-
-## Example
-
-    $ cd haskell-relational-record-driver-mysql/example
-    $ mysql -h ${host} -u ${user} -p
-    mysql> source setup.sql
-    mysql> GRANT ... ON TEST.* TO ${user}@...
-
-    $ cabal build
-    $ ./dist/build/example/example
-
+$ cabal build
+$ ./dist/build/example/example
+[("krdlab",2014-02-01),("bar",2014-02-11)]
+[("bar@example.com",2014-02-11)]
+```
 
