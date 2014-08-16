@@ -22,15 +22,14 @@ $ cabal sandbox add-source \
     ../../hdbc-mysql \
     ../
 $ cabal install --only-dependencies
+
+$ mysql -h localhost -u root -p < setup.sql
 ```
 
 ## Run example
 
 ```sh
-$ mysql -h localhost -u root -p
-mysql> source setup.sql
-mysql> GRANT ALL PRIVILEGES ON TEST.* TO 'hrr-tester'@'127.0.0.1';
-
+$ cd haskell-relational-record-driver-mysql/example
 $ cabal build
 $ ./dist/build/example/example
 [("krdlab",2014-02-01),("bar",2014-02-11)]
