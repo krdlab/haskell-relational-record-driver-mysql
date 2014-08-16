@@ -62,3 +62,4 @@ test-suite relational-mysql-spec
     , relational-query
     , relational-query-HDBC
     , relational-mysql
+    , time
