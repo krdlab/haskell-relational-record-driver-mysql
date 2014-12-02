@@ -26,8 +26,8 @@ library
       TemplateHaskell
     , MultiParamTypeClasses
   build-depends:
-      base >=4.6 && <4.7
-    , template-haskell >=2.8 && <2.9
+      base >=4.6 && <5
+    , template-haskell >=2.8
     , containers
     , bytestring
     , HDBC >=2.3
@@ -52,7 +52,7 @@ test-suite relational-mysql-spec
     Spec.hs
   build-depends:
       base
-    , template-haskell >=2.8 && <2.9
+    , template-haskell >=2.8
     , hspec
     , HDBC >=2.3
     , HDBC-mysql
