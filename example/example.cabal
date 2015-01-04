@@ -32,7 +32,6 @@ executable example
     , names-th
     , relational-query
     , relational-query-HDBC
-    , relational-mysql
     , time
   default-language:
     Haskell2010

@@ -2,6 +2,8 @@
 
 [![Build Status](https://drone.io/github.com/krdlab/haskell-relational-record-driver-mysql/status.png)](https://drone.io/github.com/krdlab/haskell-relational-record-driver-mysql/latest)
 
+*This project was merged into [haskell-relational-record](https://github.com/khibino/haskell-relational-record).*
+
 ## Prepare
 
 ```sh

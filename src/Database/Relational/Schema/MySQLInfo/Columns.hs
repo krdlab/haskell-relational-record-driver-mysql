@@ -6,8 +6,9 @@ module Database.Relational.Schema.MySQLInfo.Columns where
 import Data.Int                     (Int16)
 import Database.Record.TH           (derivingShow)
 import Database.Relational.Query.TH (defineTableTypesAndRecordDefault)
+import Database.Relational.Schema.MySQLInfo.Config (config)
 
-$(defineTableTypesAndRecordDefault
+$(defineTableTypesAndRecordDefault config
     "INFORMATION_SCHEMA" "columns"
     [ ("table_schema",      [t|String|])
     , ("table_name",        [t|String|])
